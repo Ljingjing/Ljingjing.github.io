@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="+">
+<meta name="description" content="总结 字体图标的使用和生成字体图标 css预处理器的概念 less预处理器的编译和使用 less预处理器的语法 使用less实现头部样式 使用less实现导航条样式 轮播图的响应式切换 支付交易保障栅格系统和媒体对象的使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记--移动web第二天">
 <meta property="og:url" content="http://yoursite.com/2018/09/19/移动web第二天/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="+">
+<meta property="og:description" content="总结 字体图标的使用和生成字体图标 css预处理器的概念 less预处理器的编译和使用 less预处理器的语法 使用less实现头部样式 使用less实现导航条样式 轮播图的响应式切换 支付交易保障栅格系统和媒体对象的使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T07:33:51.299Z">
+<meta property="og:updated_time" content="2018-09-30T09:08:20.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记--移动web第二天">
-<meta name="twitter:description" content="+">
+<meta name="twitter:description" content="总结 字体图标的使用和生成字体图标 css预处理器的概念 less预处理器的编译和使用 less预处理器的语法 使用less实现头部样式 使用less实现导航条样式 轮播图的响应式切换 支付交易保障栅格系统和媒体对象的使用">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -105,6 +105,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -309,10 +316,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>+<a id="more"></a></excerpt></p>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>字体图标的使用和生成字体图标</li>
 <li>css预处理器的概念</li>
 <li>less预处理器的编译和使用</li>
@@ -322,6 +326,8 @@
 <li>轮播图的响应式切换</li>
 <li>支付交易保障栅格系统和媒体对象的使用</li>
 </ol>
+<p><excerpt in="" index="" |="" 首页摘要=""><br><a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
 <h2 id="CSS预处理器（预编译器）"><a href="#CSS预处理器（预编译器）" class="headerlink" title="CSS预处理器（预编译器）"></a>CSS预处理器（预编译器）</h2><ol>
 <li>CSS预处理： 是一个高级的CSS 比传统的CSS更加强大的CSS 他能够完全兼容CSS 并且扩展CSS</li>
 <li>预处理的原理：通过写一些高级的CSS样式 通过编译处理的方式解析成 普通的CSS</li>
@@ -466,7 +472,7 @@ div{
 <li>在移动端使用小图 设置宽度100%盛满 自动宽度变化高度也会自动变化</li>
 <li>什么时候显示大图  小 中 大显示  超小隐藏<br>什么时候显示小图  超小显示 小 中 大隐藏 </li>
 </ol>
-</the>
+
       
     </div>
     
@@ -477,7 +483,7 @@ div{
         <p><span>本文标题:</span><a href="/2018/09/19/移动web第二天/">笔记--移动web第二天</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Ljingjing</a></p>
         <p><span>发布时间:</span>2018-09-19, 18:00:00</p>
-        <p><span>最后更新:</span>2018-09-30, 15:33:51</p>
+        <p><span>最后更新:</span>2018-09-30, 17:08:20</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/19/移动web第二天/" title="笔记--移动web第二天">http://yoursite.com/2018/09/19/移动web第二天/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/19/移动web第二天/　　作者: Ljingjing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

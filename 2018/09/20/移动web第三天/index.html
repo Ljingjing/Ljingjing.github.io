@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="+">
+<meta name="description" content="总结 标签页插件的使用 商品左边自适应右边固定的布局 工具提示插件的使用 新闻版块的布局 合作伙伴版块布局 登录模态框的使用 表单的使用 bootstrap定制 真机调试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记--移动web第三天">
 <meta property="og:url" content="http://yoursite.com/2018/09/20/移动web第三天/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="+">
+<meta property="og:description" content="总结 标签页插件的使用 商品左边自适应右边固定的布局 工具提示插件的使用 新闻版块的布局 合作伙伴版块布局 登录模态框的使用 表单的使用 bootstrap定制 真机调试">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T07:33:39.500Z">
+<meta property="og:updated_time" content="2018-09-30T09:08:34.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记--移动web第三天">
-<meta name="twitter:description" content="+">
+<meta name="twitter:description" content="总结 标签页插件的使用 商品左边自适应右边固定的布局 工具提示插件的使用 新闻版块的布局 合作伙伴版块布局 登录模态框的使用 表单的使用 bootstrap定制 真机调试">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -105,6 +105,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -309,11 +316,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>+<a id="more"></a></excerpt></p>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>标签页插件的使用</li>
 <li>商品左边自适应右边固定的布局</li>
 <li>工具提示插件的使用</li>
@@ -324,6 +327,9 @@
 <li>bootstrap定制</li>
 <li>真机调试</li>
 </ol>
+<p><excerpt in="" index="" |="" 首页摘要=""><br><a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
+
 <h2 id="栅格系统"><a href="#栅格系统" class="headerlink" title="栅格系统"></a>栅格系统</h2><ol>
 <li>什么时候需要写栅格： 当页面的布局有行和列的布局样式就可以使用栅格  列的大小要等比例才适合</li>
 <li>怎么使用栅格：<ol>
@@ -444,7 +450,7 @@
         <p><span>本文标题:</span><a href="/2018/09/20/移动web第三天/">笔记--移动web第三天</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Ljingjing</a></p>
         <p><span>发布时间:</span>2018-09-20, 18:00:00</p>
-        <p><span>最后更新:</span>2018-09-30, 15:33:39</p>
+        <p><span>最后更新:</span>2018-09-30, 17:08:34</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/20/移动web第三天/" title="笔记--移动web第三天">http://yoursite.com/2018/09/20/移动web第三天/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/20/移动web第三天/　　作者: Ljingjing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

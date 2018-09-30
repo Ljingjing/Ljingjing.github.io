@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="+">
+<meta name="description" content="总结 分类左侧的点击吸顶 移动端的滑动事件 移动端点击事件延迟和解决 移动端的zepto框架 rem的概念和实现屏幕适配 rem工具的使用实现jd项目">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记--移动web第六天">
 <meta property="og:url" content="http://yoursite.com/2018/09/23/移动web第6天/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="+">
+<meta property="og:description" content="总结 分类左侧的点击吸顶 移动端的滑动事件 移动端点击事件延迟和解决 移动端的zepto框架 rem的概念和实现屏幕适配 rem工具的使用实现jd项目">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T07:27:29.467Z">
+<meta property="og:updated_time" content="2018-09-30T09:07:23.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记--移动web第六天">
-<meta name="twitter:description" content="+">
+<meta name="twitter:description" content="总结 分类左侧的点击吸顶 移动端的滑动事件 移动端点击事件延迟和解决 移动端的zepto框架 rem的概念和实现屏幕适配 rem工具的使用实现jd项目">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -105,6 +105,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -309,12 +316,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>+<a id="more"></a></excerpt></p>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>分类左侧的点击吸顶</li>
 <li>移动端的滑动事件</li>
 <li>移动端点击事件延迟和解决</li>
@@ -322,6 +324,9 @@
 <li>rem的概念和实现屏幕适配</li>
 <li>rem工具的使用实现jd项目</li>
 </ol>
+<p><excerpt in="" index="" |="" 首页摘要=""><br><a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
+
 <h2 id="元素宽高继承问题"><a href="#元素宽高继承问题" class="headerlink" title="元素宽高继承问题"></a>元素宽高继承问题</h2><ol>
 <li>父元素宽度会继承给块级子元素</li>
 <li>但是父元素的高度是不会继承给子元素的</li>
@@ -604,7 +609,7 @@ mousewheel: true,
         <p><span>本文标题:</span><a href="/2018/09/23/移动web第6天/">笔记--移动web第六天</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Ljingjing</a></p>
         <p><span>发布时间:</span>2018-09-23, 18:40:00</p>
-        <p><span>最后更新:</span>2018-09-30, 15:27:29</p>
+        <p><span>最后更新:</span>2018-09-30, 17:07:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/23/移动web第6天/" title="笔记--移动web第六天">http://yoursite.com/2018/09/23/移动web第6天/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/23/移动web第6天/　　作者: Ljingjing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

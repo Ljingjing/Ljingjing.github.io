@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="+">
+<meta name="description" content="总结 移动端的一些基本基础知识 移动京东的项目搭建 公共样式的定义 顶部通栏的布局 轮播图的布局 导航条的布局 秒杀商品布局 京东超市布局">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记--移动web第四天">
 <meta property="og:url" content="http://yoursite.com/2018/09/21/移动web第四天/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="+">
+<meta property="og:description" content="总结 移动端的一些基本基础知识 移动京东的项目搭建 公共样式的定义 顶部通栏的布局 轮播图的布局 导航条的布局 秒杀商品布局 京东超市布局">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-30T07:29:03.438Z">
+<meta property="og:updated_time" content="2018-09-30T09:08:47.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记--移动web第四天">
-<meta name="twitter:description" content="+">
+<meta name="twitter:description" content="总结 移动端的一些基本基础知识 移动京东的项目搭建 公共样式的定义 顶部通栏的布局 轮播图的布局 导航条的布局 秒杀商品布局 京东超市布局">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -105,6 +105,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -309,10 +316,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>+<a id="more"></a></excerpt></p>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>移动端的一些基本基础知识</li>
 <li>移动京东的项目搭建</li>
 <li>公共样式的定义</li>
@@ -322,6 +326,9 @@
 <li>秒杀商品布局</li>
 <li>京东超市布局</li>
 </ol>
+<p><excerpt in="" index="" |="" 首页摘要=""><br><a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
+
 <h2 id="原生的移动web"><a href="#原生的移动web" class="headerlink" title="原生的移动web"></a>原生的移动web</h2><ol>
 <li>原生移动web: 单独给移动端写一套页面 页面内容简单 结构也简单 针对性强比较专一 运行效率性能高  </li>
 <li>常见原生移动web网站： m.jd.com m.taobao.com m.itheima.com 很多以m开头大部分都是原生的移动web</li>
@@ -466,7 +473,7 @@ http://www.cnblogs.com/jiangzilong/p/6700023.html
         <p><span>本文标题:</span><a href="/2018/09/21/移动web第四天/">笔记--移动web第四天</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Ljingjing</a></p>
         <p><span>发布时间:</span>2018-09-21, 18:00:00</p>
-        <p><span>最后更新:</span>2018-09-30, 15:29:03</p>
+        <p><span>最后更新:</span>2018-09-30, 17:08:47</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/21/移动web第四天/" title="笔记--移动web第四天">http://yoursite.com/2018/09/21/移动web第四天/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/21/移动web第四天/　　作者: Ljingjing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

@@ -15,12 +15,12 @@
 
 
 
-<meta name="description" content="+">
+<meta name="description" content="总结 顶部搜索框渐变JS 秒杀商品倒计时JS 轮播图插件的使用 分类页面的布局 分类左侧的滑动效果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="笔记--移动web第五天">
 <meta property="og:url" content="http://yoursite.com/2018/09/22/移动web第5天/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="+">
+<meta property="og:description" content="总结 顶部搜索框渐变JS 秒杀商品倒计时JS 轮播图插件的使用 分类页面的布局 分类左侧的滑动效果">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/09/22/移动web第5天/images/l1.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/09/22/移动web第5天/images/l2.jpg">
@@ -30,10 +30,10 @@
 <meta property="og:image" content="http://yoursite.com/2018/09/22/移动web第5天/images/l6.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/09/22/移动web第5天/images/l7.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/09/22/移动web第5天/images/l8.jpg">
-<meta property="og:updated_time" content="2018-09-30T07:26:23.778Z">
+<meta property="og:updated_time" content="2018-09-30T09:08:00.008Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记--移动web第五天">
-<meta name="twitter:description" content="+">
+<meta name="twitter:description" content="总结 顶部搜索框渐变JS 秒杀商品倒计时JS 轮播图插件的使用 分类页面的布局 分类左侧的滑动效果">
 <meta name="twitter:image" content="http://yoursite.com/2018/09/22/移动web第5天/images/l1.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -82,7 +82,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -114,6 +114,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -318,17 +325,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>+<a id="more"></a></excerpt></p>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>顶部搜索框渐变JS</li>
 <li>秒杀商品倒计时JS</li>
 <li>轮播图插件的使用</li>
 <li>分类页面的布局</li>
 <li>分类左侧的滑动效果</li>
 </ol>
-<h2 id="像素的概念"><a href="#像素的概念" class="headerlink" title="像素的概念"></a>像素的概念</h2><ol>
+<p><excerpt in="" index="" |="" 首页摘要=""><br><a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h3 id="像素的概念"><a href="#像素的概念" class="headerlink" title="像素的概念"></a>像素的概念</h3><ol>
 <li>物理分辨率像素： 屏幕的分辨率（屏幕里面一层膜） <ol>
 <li>普通电脑 屏幕分辨率 1366*768</li>
 <li>高级电脑 屏幕分辨率 1920 <em> 1080  2560 </em> 1660</li>
@@ -358,32 +365,32 @@
 </ol>
 </li>
 </ol>
-<h2 id="移动端的JS"><a href="#移动端的JS" class="headerlink" title="移动端的JS"></a>移动端的JS</h2><ol>
+<h3 id="移动端的JS"><a href="#移动端的JS" class="headerlink" title="移动端的JS"></a>移动端的JS</h3><ol>
 <li><p>使用纯原生的JS  会使用HTML5新增的JSAPI<br> document.querySelector(‘选择器’)<br> document.querySelectorAll(‘选择器’)<br> div.addEventListener(‘click’,function(){</p>
 <p> });<br> div.classList.add(‘类名’);</p>
 <p> H5的APi使用方便 在移动端兼容性好</p>
 </li>
 </ol>
-<h2 id="头部背景色渐变"><a href="#头部背景色渐变" class="headerlink" title="头部背景色渐变"></a>头部背景色渐变</h2><ol>
+<h3 id="头部背景色渐变"><a href="#头部背景色渐变" class="headerlink" title="头部背景色渐变"></a>头部背景色渐变</h3><ol>
 <li>当滚动条在滚动的时候 顶部搜索框的背景色需要渐变</li>
 <li>在轮播图高度范围内进行渐变 超过轮播图范围后固定为1</li>
 <li>在轮播图高度范围进行渐变 把背景色的透明度从0 到 1 的渐变过程</li>
 <li>透明度值 就是使用滚动的距离/轮播图的高度 </li>
 </ol>
-<h2 id="倒计时效果"><a href="#倒计时效果" class="headerlink" title="倒计时效果"></a>倒计时效果</h2><ol>
+<h3 id="倒计时效果"><a href="#倒计时效果" class="headerlink" title="倒计时效果"></a>倒计时效果</h3><ol>
 <li>要有一个时间倒计时</li>
 <li>10点场 10点-12点    假如现在10.30     12.00-10.30  =   1.30</li>
 <li>使用未来的时间  - 当前的时间   未来是12  - 当前  10.35  求到时间差的秒数</li>
 <li>倒计时是每隔1秒总的时间– </li>
 <li>把总时间时  分 秒 放到页面的span里面</li>
 </ol>
-<h2 id="轮播图效果"><a href="#轮播图效果" class="headerlink" title="轮播图效果"></a>轮播图效果</h2><ol>
+<h3 id="轮播图效果"><a href="#轮播图效果" class="headerlink" title="轮播图效果"></a>轮播图效果</h3><ol>
 <li>移动端需要自动轮播图</li>
 <li>小圆点跟着自动轮播图</li>
 <li>滑动轮播图</li>
 <li>一般实现轮播图都使用插件实现</li>
 </ol>
-<h2 id="swiper轮播图插件的使用"><a href="#swiper轮播图插件的使用" class="headerlink" title="swiper轮播图插件的使用"></a>swiper轮播图插件的使用</h2><ol>
+<h3 id="swiper轮播图插件的使用"><a href="#swiper轮播图插件的使用" class="headerlink" title="swiper轮播图插件的使用"></a>swiper轮播图插件的使用</h3><ol>
 <li>下载swiper插件 </li>
 <li>下载完成后要解压 使用里面的dist目录</li>
 <li>把dist复制到项目改成名字swiper</li>
@@ -441,7 +448,7 @@ height: 300px;
 
 </li>
 </ol>
-<h2 id="swiper插件的一些常见参数"><a href="#swiper插件的一些常见参数" class="headerlink" title="swiper插件的一些常见参数"></a>swiper插件的一些常见参数</h2><ol>
+<h3 id="swiper插件的一些常见参数"><a href="#swiper插件的一些常见参数" class="headerlink" title="swiper插件的一些常见参数"></a>swiper插件的一些常见参数</h3><ol>
 <li>轮播图的方向<br>  direction: ‘vertical’  垂直<br>  direction: ‘horizontal’  水平</li>
 <li>自动轮播图<br>autoplay:{<br>  delay: 3000,//轮播图的延迟<br>  stopOnLastSlide: false,// 如果设置为true，当切换到最后一个slide时停止自动切换。（loop模式下无效）<br>  disableOnInteraction:true,//当用户滑动的时候禁止自动轮播图 不需要禁止就为false<br>}</li>
 <li>是否开启无缝轮播图<br> loop: true,//是否开启无缝轮播图 开启无轮播图  如果不开 刷回去倒退回去</li>
@@ -453,11 +460,11 @@ prevEl: &apos;.swiper-button-prev&apos;,
 <li>是否要支持滚动条<br>  scrollbar: {<pre><code>el: &apos;.swiper-scrollbar&apos;,
 </code></pre>   },//指定滚动条的容器</li>
 </ol>
-<h2 id="修改轮播图的样式"><a href="#修改轮播图的样式" class="headerlink" title="修改轮播图的样式"></a>修改轮播图的样式</h2><ol>
+<h3 id="修改轮播图的样式"><a href="#修改轮播图的样式" class="headerlink" title="修改轮播图的样式"></a>修改轮播图的样式</h3><ol>
 <li>如果需要修改图片大小 直接选中你的图片设置大小</li>
 <li>如果要修改小圆点的样式 </li>
 </ol>
-<h2 id="使用swiper完成jd主页轮播图效果"><a href="#使用swiper完成jd主页轮播图效果" class="headerlink" title="使用swiper完成jd主页轮播图效果"></a>使用swiper完成jd主页轮播图效果</h2><ol>
+<h3 id="使用swiper完成jd主页轮播图效果"><a href="#使用swiper完成jd主页轮播图效果" class="headerlink" title="使用swiper完成jd主页轮播图效果"></a>使用swiper完成jd主页轮播图效果</h3><ol>
 <li>引包 注意在我们的样式前面引入swiper.css 在我们的js前面引入swiper.js</li>
 <li><p>写结构</p>
    <div class="swiper-container"><br>       <!-- 轮播图的图片容器 装的是所有的轮播图项(一般是图片) --><br>       <div class="swiper-wrapper"><br>           <!-- swiper-slide 每一个轮播项 --><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l1.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l2.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l3.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l4.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l5.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l6.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l7.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l8.jpg" alt=""><br>               </a><br>           </div><br>       </div><br>       <!-- 小圆点容器 --><br>       <div class="swiper-pagination"></div><br>   </div> 
@@ -493,7 +500,7 @@ pagination: {
 }      
 </code></pre> });</li>
 </ol>
-<h2 id="写JS代码的规范"><a href="#写JS代码的规范" class="headerlink" title="写JS代码的规范"></a>写JS代码的规范</h2><ol>
+<h3 id="写JS代码的规范"><a href="#写JS代码的规范" class="headerlink" title="写JS代码的规范"></a>写JS代码的规范</h3><ol>
 <li>如果JS代码太多的时候不能全部写在一块  把每个代码区分功能块</li>
 <li>当JS代码的功能不一样的时候要区分JS代码的功能<ol>
 <li>顶部是一个功能</li>
@@ -526,14 +533,14 @@ pagination: {
 <li><p>高级对象和框架式写法都是为了未来方便去维护和扩展代码</p>
 </li>
 </ol>
-<h2 id="京东分类页面布局"><a href="#京东分类页面布局" class="headerlink" title="京东分类页面布局"></a>京东分类页面布局</h2><ol>
+<h3 id="京东分类页面布局"><a href="#京东分类页面布局" class="headerlink" title="京东分类页面布局"></a>京东分类页面布局</h3><ol>
 <li>京东分类页面是全屏的  水平和垂直都没有滚动条 （注意）</li>
 <li><p>要显示更多内容 使用滑动来实现  （注意）<br> 左侧菜单有滑动<br> 右侧商品列表也有滑动<br> 滑动都是垂直方向</p>
 </li>
 <li><p>如果想要实现全屏页面 就要让body宽高和屏幕一样宽高 里面的内容也不能超出body 如果有超出要设置overflow:hidden</p>
 </li>
 </ol>
-<h2 id="背景图的定位原点和背景图裁切"><a href="#背景图的定位原点和背景图裁切" class="headerlink" title="背景图的定位原点和背景图裁切"></a>背景图的定位原点和背景图裁切</h2><ol>
+<h3 id="背景图的定位原点和背景图裁切"><a href="#背景图的定位原点和背景图裁切" class="headerlink" title="背景图的定位原点和背景图裁切"></a>背景图的定位原点和背景图裁切</h3><ol>
 <li><p>background-origin:  改变背景图定位位置参照点  默认padding-box<br>可以设置为border-box padding-box  content-box<br>改变后就会按照你设置的背景图定位参照盒模型范围的左上角</p>
 </li>
 <li><p>background-clip: 实现背景图的裁切 默认 border-box 表示边框范围内都有背景图<br> 可以设置为border-box  padding-box  content-box<br> 设置了之后就会改变背景图出现的范围 </p>
@@ -541,7 +548,7 @@ pagination: {
 <li><p>通常2个会结合在一起使用 一般当盒子有padding或者有边框的时候才需要设置这些东西</p>
 </li>
 </ol>
-<h2 id="实现分类页面的全屏布局"><a href="#实现分类页面的全屏布局" class="headerlink" title="实现分类页面的全屏布局"></a>实现分类页面的全屏布局</h2><ol>
+<h3 id="实现分类页面的全屏布局"><a href="#实现分类页面的全屏布局" class="headerlink" title="实现分类页面的全屏布局"></a>实现分类页面的全屏布局</h3><ol>
 <li>给头部 固定高度 位置固定定位在顶部</li>
 <li>给底部 固定高度 位置固定定位在底部</li>
 <li>给html和body设置高度100% </li>
@@ -560,7 +567,7 @@ pagination: {
         <p><span>本文标题:</span><a href="/2018/09/22/移动web第5天/">笔记--移动web第五天</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Ljingjing</a></p>
         <p><span>发布时间:</span>2018-09-22, 18:40:00</p>
-        <p><span>最后更新:</span>2018-09-30, 15:26:23</p>
+        <p><span>最后更新:</span>2018-09-30, 17:08:00</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/22/移动web第5天/" title="笔记--移动web第五天">http://yoursite.com/2018/09/22/移动web第5天/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/22/移动web第5天/　　作者: Ljingjing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -596,7 +603,7 @@ pagination: {
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#像素的概念"><span class="toc-number">2.</span> <span class="toc-text">像素的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端的JS"><span class="toc-number">3.</span> <span class="toc-text">移动端的JS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#头部背景色渐变"><span class="toc-number">4.</span> <span class="toc-text">头部背景色渐变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#倒计时效果"><span class="toc-number">5.</span> <span class="toc-text">倒计时效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#轮播图效果"><span class="toc-number">6.</span> <span class="toc-text">轮播图效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swiper轮播图插件的使用"><span class="toc-number">7.</span> <span class="toc-text">swiper轮播图插件的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swiper插件的一些常见参数"><span class="toc-number">8.</span> <span class="toc-text">swiper插件的一些常见参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改轮播图的样式"><span class="toc-number">9.</span> <span class="toc-text">修改轮播图的样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用swiper完成jd主页轮播图效果"><span class="toc-number">10.</span> <span class="toc-text">使用swiper完成jd主页轮播图效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写JS代码的规范"><span class="toc-number">11.</span> <span class="toc-text">写JS代码的规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#京东分类页面布局"><span class="toc-number">12.</span> <span class="toc-text">京东分类页面布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#背景图的定位原点和背景图裁切"><span class="toc-number">13.</span> <span class="toc-text">背景图的定位原点和背景图裁切</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现分类页面的全屏布局"><span class="toc-number">14.</span> <span class="toc-text">实现分类页面的全屏布局</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#像素的概念"><span class="toc-number">1.1.</span> <span class="toc-text">像素的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动端的JS"><span class="toc-number">1.2.</span> <span class="toc-text">移动端的JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#头部背景色渐变"><span class="toc-number">1.3.</span> <span class="toc-text">头部背景色渐变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#倒计时效果"><span class="toc-number">1.4.</span> <span class="toc-text">倒计时效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#轮播图效果"><span class="toc-number">1.5.</span> <span class="toc-text">轮播图效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#swiper轮播图插件的使用"><span class="toc-number">1.6.</span> <span class="toc-text">swiper轮播图插件的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#swiper插件的一些常见参数"><span class="toc-number">1.7.</span> <span class="toc-text">swiper插件的一些常见参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改轮播图的样式"><span class="toc-number">1.8.</span> <span class="toc-text">修改轮播图的样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用swiper完成jd主页轮播图效果"><span class="toc-number">1.9.</span> <span class="toc-text">使用swiper完成jd主页轮播图效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写JS代码的规范"><span class="toc-number">1.10.</span> <span class="toc-text">写JS代码的规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#京东分类页面布局"><span class="toc-number">1.11.</span> <span class="toc-text">京东分类页面布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#背景图的定位原点和背景图裁切"><span class="toc-number">1.12.</span> <span class="toc-text">背景图的定位原点和背景图裁切</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现分类页面的全屏布局"><span class="toc-number">1.13.</span> <span class="toc-text">实现分类页面的全屏布局</span></a></li></ol></li></ol>
         
     </div>
     <style>
