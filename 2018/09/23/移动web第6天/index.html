@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Ljingjing" />
+
+
+
+<meta name="description" content="+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记--移动web第六天">
+<meta property="og:url" content="http://yoursite.com/2018/09/23/移动web第6天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="+">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-30T07:27:29.467Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="笔记--移动web第六天">
+<meta name="twitter:description" content="+">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>笔记--移动web第六天 | Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/touxiang.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Ljingjing</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/771580134@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="/阳光下的小孩er" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Ljingjing" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 网易云音乐" href="/netease" title="网易云音乐"></a>
+                            
+                                <a class="fa QQ" href="/771580134" title="QQ"></a>
+                            
+                                <a class="fa 微信" href="/771580134" title="微信"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Ljingjing</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/touxiang.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Ljingjing</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/771580134@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="/阳光下的小孩er" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Ljingjing" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="/netease" title="网易云音乐"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="/771580134" title="QQ"></a>
+                            
+                                <a class="fa 微信" target="_blank" href="/771580134" title="微信"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-移动web第6天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/23/移动web第6天/" class="article-date">
+      <time datetime="2018-09-23T10:40:00.000Z" itemprop="datePublished">2018-09-23</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      笔记--移动web第六天
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首页摘要=""><br>+<a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>分类左侧的点击吸顶</li>
+<li>移动端的滑动事件</li>
+<li>移动端点击事件延迟和解决</li>
+<li>移动端的zepto框架</li>
+<li>rem的概念和实现屏幕适配</li>
+<li>rem工具的使用实现jd项目</li>
+</ol>
+<h2 id="元素宽高继承问题"><a href="#元素宽高继承问题" class="headerlink" title="元素宽高继承问题"></a>元素宽高继承问题</h2><ol>
+<li>父元素宽度会继承给块级子元素</li>
+<li>但是父元素的高度是不会继承给子元素的</li>
+<li>html 和 body 和 window的关系和他们的高度<br> window 浏览器窗口<br> html整个网页的文档<br> body整个网页内容的文档<br> 由于手机屏幕浏览器的高度和网页高度一致<br> window在手机端和html和 body重叠的<br> window最大  高度和屏幕高度一样<br> html是window的儿子 由于高度不会继承  你可以设置高度100% 可以和window一样高<br> body是html的儿子  虽然html有高了但是不会继承给body body没有高 如果要高也要设置h100%和html一样高</li>
+</ol>
+<h2 id="jd分类左右滑动的功能"><a href="#jd分类左右滑动的功能" class="headerlink" title="jd分类左右滑动的功能"></a>jd分类左右滑动的功能</h2><ol>
+<li>有一个父容器就是category-left</li>
+<li>有一个子容器 ul  </li>
+<li>父容器高度固定 整个页面高度-头部-底部高度</li>
+<li>ul高度不是固定 由li内容撑开</li>
+<li>ul高度比父元素高  为了看到后面的内容 实现滑动来看</li>
+</ol>
+<h2 id="使用swiper的滑动效果来实现分类左右侧滑动功能"><a href="#使用swiper的滑动效果来实现分类左右侧滑动功能" class="headerlink" title="使用swiper的滑动效果来实现分类左右侧滑动功能"></a>使用swiper的滑动效果来实现分类左右侧滑动功能</h2><ol>
+<li>使用swiper官方demo里面的内容滚动</li>
+<li>使用方式<ol>
+<li>引包引入swiper.css 和 js</li>
+<li>写结构<div class="swiper-container"><br> <div class="swiper-wrapper"><br>     <!-- swiper-slide里面的内容就是我们真实要滑动的内容 也就是我们的ul li --><br>     <div class="swiper-slide"><br>        <ul><br>          <li>内容</li><br>          <li>内容</li><br>          <li>内容</li><br>          <li>内容</li><br>        </ul><br>     </div><br> </div><br></div></li>
+<li>写样式<br>   html, body {<pre><code>position: relative;
+height: 100%;
+</code></pre>   }</li>
+</ol>
+</li>
+</ol>
+<pre><code>      .swiper-container {
+          width: 100%;
+          height: 100%;
+      }
+
+      .swiper-slide {
+          /*注意子元素设置height:auto;  auto意思就是高度由内容撑开 由于swiper默认设置了高度100% 要还原回高度 auto*/
+          height: auto;
+      }
+    1. 一定要给html body设置高度100% 要给.swiper-container大容器设置高度100%
+    2. 设置子元素高度 auto 由内容撑开 保证子元素高度比父元素高 当子元素比父元素高的时候才有必要做滑动  因为swiper实现轮播图设置了高度100%把他还原成auto
+4. 初始化swiper
+    var swiper = new Swiper(&apos;.swiper-container&apos;, {
+      direction: &apos;vertical&apos;,//方向垂直
+      slidesPerView: &apos;auto&apos;,//
+      freeMode: true,
+      scrollbar: {
+          el: &apos;.swiper-scrollbar&apos;,
+      },
+      mousewheel: true,
+  });
+</code></pre><h2 id="使用swiper的内容滚动实现jd左侧分类滑动"><a href="#使用swiper的内容滚动实现jd左侧分类滑动" class="headerlink" title="使用swiper的内容滚动实现jd左侧分类滑动"></a>使用swiper的内容滚动实现jd左侧分类滑动</h2><ol>
+<li>引包</li>
+<li>写结构 （那个地方需要滚动就给那个地方加结构）<br> 左侧分类的ul要滚动 在ul上添加swiper结构 <div class="swiper-container"><br>   <div class="swiper-wrapper"><br>       <div class="swiper-slide"><br>           <!-- 用来放滚动的内容的 --><br>           <ul><br>             <li class="active"><a href="#">热门推荐</a></li><br>             <li><a href="#">手机数码</a></li><br>             <li><a href="#">家用电器</a></li><br>             <li><a href="#">电脑办公</a></li><br>             <li><a href="#">计生情趣</a></li><br>           </ul><br>       </div><br>   </div><br>   <!-- Add Scroll Bar --><br>   <div class="swiper-scrollbar"></div><br> </div></li>
+<li>写样式<br> html,body 设置高度100%<br> main和category-left高度都要是100%<br> 给swiper-container 也要设置高度100%<br> 给swiper-slide 设置高度auto</li>
+<li>初始化<br> var swiper = new Swiper(‘.swiper-container’, {<pre><code>direction: &apos;vertical&apos;,
+slidesPerView: &apos;auto&apos;,
+freeMode: true,
+scrollbar: {
+    el: &apos;.swiper-scrollbar&apos;,
+},
+mousewheel: true,
+</code></pre> });</li>
+</ol>
+<h2 id="实现左侧分类的点击效果"><a href="#实现左侧分类的点击效果" class="headerlink" title="实现左侧分类的点击效果"></a>实现左侧分类的点击效果</h2><ol>
+<li>点击了某个导航链接要 位移到让当前点击的链接吸顶</li>
+<li>相当于就是点击了某个链接位移 到当前点击的li的地方  位移的距离就是-li的索引<em>li的高度<br> 第一个li 索引0   - 0 </em> 46  = 0px;<br> 第二个li 索引1   - 1 * 46  = -46px;</li>
+<li>但是到了后面的链接已经到达最大位移距离就设置为最大位移的距离<br> 当父元素和子元素底部相连的时候就是最大位移的距离<br> 最大距离 =  父元素的高度 - 子元素的高度   600px  - 1700px = -1100px</li>
+</ol>
+<h2 id="移动端的zepto框架-http-www-css88-com-doc-zeptojs-api"><a href="#移动端的zepto框架-http-www-css88-com-doc-zeptojs-api" class="headerlink" title="移动端的zepto框架  (http://www.css88.com/doc/zeptojs_api/)"></a>移动端的zepto框架  (<a href="http://www.css88.com/doc/zeptojs_api/" target="_blank" rel="noopener">http://www.css88.com/doc/zeptojs_api/</a>)</h2><ol>
+<li>全部使用原生JS写代码太麻烦 而且会有一些兼容性问题 一般在PC开发使用jquery</li>
+<li>但是jquery兼容IE8多一些不太适合移动端</li>
+<li>市面上就有了一个zepto 是移动端的jquery有着和jquery一样的API  使用方式一模一样 如果会使用jquery就会使用zepto</li>
+<li>就是因为针对移动端 体积小轻量级 有一些针对移动端事件滑动事件</li>
+</ol>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><ol>
+<li>下载包</li>
+<li>引包</li>
+<li>使用方式参照官网文档 或者以jquery方式用</li>
+</ol>
+<h2 id="不一样的地方"><a href="#不一样的地方" class="headerlink" title="不一样的地方"></a>不一样的地方</h2><ol>
+<li>移动端一般不使用click事件 在手机上click有一个延迟效果</li>
+<li>使用tap事件来解决延迟问题 （tap事件未来在很多移动端框架库里面都有）</li>
+</ol>
+<h2 id="移动端的屏幕适配"><a href="#移动端的屏幕适配" class="headerlink" title="移动端的屏幕适配"></a>移动端的屏幕适配</h2><ol>
+<li><p>移动端手机屏幕大小不一<br>320<br>360<br>375<br>414</p>
+</li>
+<li><p>为了让我们的网页兼容各种屏幕 在移动端需要做屏幕适配   手机网页都是全屏的不像PC端居中显示</p>
+</li>
+<li><p>怎么实现屏幕适配</p>
+<ol>
+<li>百分比布局 根据屏幕宽度自动变化百分比  宽度百分比 高度写死（高度无法百分比）</li>
+<li>flex布局 也可以实现宽度自适应 但是也不能实现高度自适应</li>
+<li>rem布局 既可以实现宽度自适应 又可以实现高度自适应 （整个网页全部自适应）</li>
+</ol>
+</li>
+</ol>
+<h2 id="使用Rem实现屏幕适配"><a href="#使用Rem实现屏幕适配" class="headerlink" title="使用Rem实现屏幕适配"></a>使用Rem实现屏幕适配</h2><ol>
+<li><p>Rem是什么：  root element 根元素元素 是一个相对单位 参照根元素的字体大小  根元素就是html元素只有祖先<br> 1rem = 1根元素的字体大小   也是一种单位跟px一样的可以在任意写px地方用rem<br> 默认网页字体是16px html字体大小就是16px<br> 默认1rem = 16px 10rem = 160px<br> 如果你改了html根元素字体大小 使用的rem也会跟着变化<br> 但是注意网页最小是字体大小是12px 根元素字体大小最小12px</p>
+</li>
+<li><p>em: element 元素 是一个相对单位 相对的是当前元素的字体大小 参照的是自己<br> 默认当前元素字体大小是16px 1em=16px<br> 如果修改了当前元素的字体大小那么em也会修改</p>
+</li>
+<li><p>相同的rem和em都是相对单位 相对的都是字体的大小</p>
+</li>
+<li><p>实现屏幕适配一般使用rem不使用em</p>
+<ol>
+<li>rem 参照根元素  所有rem都是统一的大小<br>只要修改了根元素的字体大小整个页面用到rem都会变化 只需要该一个值实现屏幕适配</li>
+<li>使用em 参照自身 自身字体大小不均与 导致em大小也不样 如果修改 可能每个都要</li>
+</ol>
+</li>
+</ol>
+<ol start="5">
+<li>使用rem实现屏幕适配的原理<ol>
+<li>指定一个标准屏幕 比如iphone 678  375 指定标准屏幕根元素字体大小比如100px</li>
+<li>页面所有使用px地方换成rem  刚好缩小100倍来写   width:100px = width:1rem</li>
+<li>还需要实现所有屏幕都会参照标准的375来走<br>   320 根元素字体大小小一点<br>   414 根元素的字体大一点</li>
+<li>变化的计算公式<br> 当前屏幕宽度 / 标准屏幕的整屏的rem值<br> 320  / 3.75 ==  85.333<br> 414  / 3.75 ==  110.4<br> 使用JS来获取屏幕宽度 / 标准3.75<br> 把这个计算好的当前屏幕根元素字体大小设置给当前根元素<br> 如果需要屏幕变化拉动自适应 添加resize事件 </li>
+</ol>
+</li>
+</ol>
+<ol start="6">
+<li>rem 工具的使用 <a href="http://alurk.com/" target="_blank" rel="noopener">http://alurk.com/</a><ol>
+<li>帮你把px转成rem 只需要把代码复制进去 转好粘贴回来即可</li>
+<li>把标准根元素字体大小设置为100x</li>
+<li>把body的字体大小设置为16px要还原</li>
+<li>引入当前使用JS 动态变化根元素字体大小的js 要在head中引入影响到页面的渲染</li>
+</ol>
+</li>
+</ol>
+<h3 id="找bug技巧"><a href="#找bug技巧" class="headerlink" title="找bug技巧"></a>找bug技巧</h3><ol>
+<li>多看bug(见识广)</li>
+<li><p>会找bug</p>
+<ol>
+<li>页面结构bug   标签是否有结束 标签是否会多加结束  标签单词错误 </li>
+<li>页面样式bug  <ol>
+<li>样式没出来 <ol>
+<li>样式文件没引入</li>
+<li>样式生效没有（审查元素找到要设置样式的元素） 如果看不到 选择器选错 类名或者id写错</li>
+</ol>
+</li>
+<li>样式有但没有效果<ol>
+<li>样式属性是否写 属性前有感叹号属性错了 或者值</li>
+<li>样式属性是否被覆盖或者继承 样式属性有没有中划线</li>
+</ol>
+</li>
+<li>自己不知道怎么写样式  居中（内容居中text-align:center）块居中margin:0 auto;</li>
+<li>引入bootstrap会出的样式问题<ol>
+<li>没有引入包</li>
+<li>类名错误</li>
+<li>发现覆盖不了bootstrap选择器优先级不够</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>页面功能bug<ol>
+<li>功能没生效</li>
+<li>文件没引入</li>
+<li>依赖的文件没引入（jquery  zepto ）</li>
+<li>是否定义函数 有没有被调用</li>
+<li>代码是否报错 （单词错 赋值错 变量名。。）</li>
+<li>看代码是否执行 （断点调试看看代码是否执行（事件没被触发 事件名错误 元素没获取到））</li>
+<li>一些获取值的方式错误（兼容性问题 单词错误）</li>
+<li>逻辑错误  (代码执行顺序是否符合你写的顺序 )</li>
+<li>变量名重复 全局已经有变量 局部又用var</li>
+</ol>
+</li>
+<li>环境系统bug</li>
+</ol>
+</li>
+<li><p>善于总结</p>
+<ol>
+<li>出了bug记录下来 bug现象 bug原因 解决方案</li>
+</ol>
+</li>
+</ol>
+<h2 id="移动web总结"><a href="#移动web总结" class="headerlink" title="移动web总结"></a>移动web总结</h2><ol>
+<li>移动web开发的现状： 前端最热门的开发  市场大 需求大 工资高 代码少 兼容性少 容易学</li>
+<li>移动web的开发方式<ol>
+<li>响应式开发方式 一个页面适配多个终端</li>
+<li>原生开发方式 单独PC和移动端都写一套代码</li>
+</ol>
+</li>
+<li><p>响应式开发的原理： 媒体查询<br>@media(width:值){<br> //条件成立执行的代码<br>}<br>判断有3种<br>width:值  等于这个值<br>min-width:值 大于等于这个值  从小到大写 向下覆盖<br>max-width:值 小于等于这个  从大到小写  向上覆盖</p>
+</li>
+<li><p>响应式的开发框架<br> bootstrap  最常用的<br> MUI<br> AmazeUI </p>
+</li>
+<li><p>bootstrap的使用</p>
+<ol>
+<li>下载包</li>
+<li>看懂文档 全局CSS样式（一些简单类名） 组件 （标签类名组合在一起的效果但是没有交互） 插件 （组件并带有交互）</li>
+<li>找到需要的样式或者组件插件 复制结构</li>
+<li>需要修改样式 审查元素找到样式对应的类名 覆盖 推荐外面使用id 方便覆盖</li>
+</ol>
+</li>
+<li><p>容器   container 布局容器  居中  栅格系统 行和 列 row放到container里面 col放到行里面<br>列有4个档次 xs sm md lg<br>一行最多分为12列  col-xs-1  col-xs-12</p>
+</li>
+<li><p>导航条 轮播图 折叠菜单collapse  标签页 表单表格 媒体对象 弹出框 提示工具 模态框 按钮 响应式工具</p>
+</li>
+<li><p>字体图标上传svg图标下载代码引入css使用类名   原理是使用CSS3 web字体 引入对应字体文件 使用图标对应的编码</p>
+</li>
+<li><p>移动端基本概念  手机分辨率通常比真实宽高大2倍 图片都是按照分辨率来设计 页面CSS宽高是按照真实的宽高设置 使用图片和背景图要缩小一半来写 </p>
+</li>
+<li>搭建jd首页布局 百分比布局 + flex布局</li>
+<li>顶部渐变效果 获取滚动条高度</li>
+<li>倒计时JS 获取时间计算 分别计算时分秒十位个位来显示倒计时</li>
+<li>轮播图使用swiper轮播图</li>
+<li>背景图背景图定位原点和背景图裁切</li>
+<li>分类左右2侧 flex布局</li>
+<li>分类左右2侧滑动使用swiper滑动</li>
+<li><p>swiper插件的使用</p>
+<ol>
+<li>引入包 css</li>
+<li>引入js</li>
+<li>写页面结构<div class="swiper-container"><br><div class="swiper-wrapper"><br><div class="swiper-slide"><br>  内容或者图片<br></div><br></div><br></div></li>
+<li>如果滚动还需要设置样式<br>.swiper-container{<br>  height:100%;<br>}<br>body,html父元素等都要设置100%高度<br>.swiper-slide 高度自动</li>
+<li>对轮播图插件去初始化<br>// 3. 初始化swiper的滑动<br>var swiper = new Swiper(‘.swiper-container’, {<br> // 控制轮播图滚动的方向 horizontal水平 vertical 垂直<pre><code>direction: &apos;vertical&apos;,
+</code></pre>   //可以支持多个swiper-slide 可以有多个轮播图<pre><code>slidesPerView: &apos;auto&apos;,
+//支持弹簧
+freeMode: true,
+//控制轮播图动画切换的速度  轮播图动画的时间
+speed: 300,
+//添加一个小手
+grabCursor: true,
+// 添加循环 无缝轮播图 
+loop: true,
+//添加自动轮播图 delay自动轮播的间隔时间
+autoplay: {
+    delay: 1000,
+    //到最后一张停止自动轮播图 但是loop了后就停不下来了
+    stopOnLastSlide: true,
+    // 是否要当触摸的时候禁止自动轮播图  ture就禁止 false不禁止
+    disableOnInteraction: false,
+},
+// 给图片直接添加间距
+// spaceBetween : 100,
+// 如果需要分页器  小圆点
+pagination: {
+    el: &apos;.swiper-pagination&apos;,
+},
+// 如果需要前进后退按钮  左右箭头
+navigation: {
+    nextEl: &apos;.swiper-button-next&apos;,
+    prevEl: &apos;.swiper-button-prev&apos;,
+},
+//支持鼠标滚轮  只有PC能用
+mousewheel: true,
+</code></pre>});</li>
+</ol>
+</li>
+<li><p>移动端点击事件 有300ms延迟 可以使用touch事件模拟click 也可以使用第三方包fastclick解决</p>
+</li>
+<li>常见移动端滑动事件 touchstart touchmove touchend e事件源对象 e.touches所有手指<br>e.touches[0].clientX 手指在页面上水平位置 e.touches[0].clientY 垂直位置</li>
+<li>移动端zepto库 类似jquery 有jquery就不要使用zepto 不要同时引入2个包 $ 会冲突</li>
+<li>rem: root element根元素 参照根元素html元素的字体大小 1html的字体大小16px 1rem=16px</li>
+<li>rem的好处 相对html字体大小html字体大小不会随意变化 统一所有使用rem的大小 实现宽度和高度的和内容都自适应</li>
+<li>使用rem实现网页自适应的原理是通过媒体查询 或者JS来不断改变html的字体大小html字体大小改变 那么使用rem单位大小都会被改变</li>
+<li>rem工具  <a href="http://alurk.com/" target="_blank" rel="noopener">http://alurk.com/</a> 使用 把px转成rem按照750设计稿调试的时候也是按照750屏幕调试<br>把页面做的跟设计稿一模一样 把px转成rem并且html字体大小也跟着变化 会在所有屏幕都进行等比例缩放 整个页面自适应 注意改了html字体大小 整个页面都会继承html字体 文字可能会很大 把body字体大小设置回16px</li>
+</ol>
+<h2 id="找网站和扒网站"><a href="#找网站和扒网站" class="headerlink" title="找网站和扒网站"></a>找网站和扒网站</h2><ol>
+<li>bootstrap官网的案例 <a href="http://expo.bootcss.com/" target="_blank" rel="noopener">http://expo.bootcss.com/</a></li>
+<li>妹子UI的官网的案例 <a href="http://amazeui.org/showcase/" target="_blank" rel="noopener">http://amazeui.org/showcase/</a></li>
+<li>无忧网络官网的案例 <a href="http://www.cnitc.net" target="_blank" rel="noopener">http://www.cnitc.net</a></li>
+<li>招聘网站上的一些项目</li>
+<li>扒网站 <ol>
+<li>打开 TeleportUltraPortable.exe 程序</li>
+<li>点击左上角的file &gt; new project wizard</li>
+<li>点击第二个单选按钮 Duplicate  </li>
+<li>点击下下一步 输入要扒的网址 up里面是扒几层</li>
+<li>一路下一步 保存到一个目录</li>
+<li>点击中间上方的蓝色开始箭头开始扒 </li>
+<li>扒完了在目录旁边出一个文件夹 就是网站的文件夹</li>
+</ol>
+</li>
+</ol>
+<h2 id="前端学习路线"><a href="#前端学习路线" class="headerlink" title="前端学习路线"></a>前端学习路线</h2><ol>
+<li><a href="https://zwxs.github.io/FrontEndMaterial/synthesis.html" target="_blank" rel="noopener">https://zwxs.github.io/FrontEndMaterial/synthesis.html</a></li>
+</ol>
+<p>{}+[]  隐式转成数字 相加<br>{}+{}  隐式转成字符串相加<br>[]+[]  隐式转成字符串相加<br>[]+{}  隐式转成字符串相加</p>
+</the>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/09/23/移动web第6天/">笔记--移动web第六天</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Ljingjing</a></p>
+        <p><span>发布时间:</span>2018-09-23, 18:40:00</p>
+        <p><span>最后更新:</span>2018-09-30, 15:27:29</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/23/移动web第6天/" title="笔记--移动web第六天">http://yoursite.com/2018/09/23/移动web第6天/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/23/移动web第6天/　　作者: Ljingjing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/09/30/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/09/22/移动web第5天/">
+                    笔记--移动web第五天
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元素宽高继承问题"><span class="toc-number">2.</span> <span class="toc-text">元素宽高继承问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jd分类左右滑动的功能"><span class="toc-number">3.</span> <span class="toc-text">jd分类左右滑动的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用swiper的滑动效果来实现分类左右侧滑动功能"><span class="toc-number">4.</span> <span class="toc-text">使用swiper的滑动效果来实现分类左右侧滑动功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用swiper的内容滚动实现jd左侧分类滑动"><span class="toc-number">5.</span> <span class="toc-text">使用swiper的内容滚动实现jd左侧分类滑动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现左侧分类的点击效果"><span class="toc-number">6.</span> <span class="toc-text">实现左侧分类的点击效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端的zepto框架-http-www-css88-com-doc-zeptojs-api"><span class="toc-number">7.</span> <span class="toc-text">移动端的zepto框架  (http://www.css88.com/doc/zeptojs_api/)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方式"><span class="toc-number">8.</span> <span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不一样的地方"><span class="toc-number">9.</span> <span class="toc-text">不一样的地方</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端的屏幕适配"><span class="toc-number">10.</span> <span class="toc-text">移动端的屏幕适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Rem实现屏幕适配"><span class="toc-number">11.</span> <span class="toc-text">使用Rem实现屏幕适配</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#找bug技巧"><span class="toc-number">11.1.</span> <span class="toc-text">找bug技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动web总结"><span class="toc-number">12.</span> <span class="toc-text">移动web总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#找网站和扒网站"><span class="toc-number">13.</span> <span class="toc-text">找网站和扒网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端学习路线"><span class="toc-number">14.</span> <span class="toc-text">前端学习路线</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"笔记--移动web第六天　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2018/09/23/移动web第6天/" data-title="笔记--移动web第六天" data-url="http://yoursite.com/2018/09/23/移动web第6天/"></div>
+    <script>
+        var duoshuoQuery = {short_name:""};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/09/30/hello-world/" title="上一篇: Hello World">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/09/22/移动web第5天/" title="下一篇: 笔记--移动web第五天">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/30/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/23/移动web第6天/">笔记--移动web第六天</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/22/移动web第5天/">笔记--移动web第五天</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/21/移动web第四天/">笔记--移动web第四天</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/20/移动web第三天/">笔记--移动web第三天</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/19/移动web第二天/">笔记--移动web第二天</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/18/移动web第一天/">笔记--移动web第一天</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 Ljingjing
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

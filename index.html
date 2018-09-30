@@ -276,278 +276,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-移动web第5天" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/09/30/移动web第5天/" class="article-date">
-      <time datetime="2018-09-30T02:39:20.858Z" itemprop="datePublished">2018-09-30</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>顶部搜索框渐变JS</li>
-<li>秒杀商品倒计时JS</li>
-<li>轮播图插件的使用</li>
-<li>分类页面的布局</li>
-<li>分类左侧的滑动效果</li>
-</ol>
-<h2 id="像素的概念"><a href="#像素的概念" class="headerlink" title="像素的概念"></a>像素的概念</h2><ol>
-<li>物理分辨率像素： 屏幕的分辨率（屏幕里面一层膜） <ol>
-<li>普通电脑 屏幕分辨率 1366*768</li>
-<li>高级电脑 屏幕分辨率 1920 <em> 1080  2560 </em> 1660</li>
-<li>普通手机 屏幕分辨率 750 * 1334</li>
-<li>高级手机 屏幕分辨率 1125 * 2436<br>屏幕分辨率值的是屏幕内屏里面的最小单元格</li>
-</ol>
-</li>
-<li>真实尺寸的像素 ： 真实尺寸的像素 固定的只要设备大小一样 真实像素就一样<ol>
-<li>普通电脑14寸 ： 真实 1366 * 768</li>
-<li>高级电脑13.3寸  真实 1280 * 720</li>
-<li>普通手机4.7        真实 375 * 667</li>
-<li>高级手机5.5寸      真实 414 * 736w<br>真实像素是屏幕外屏里面的最小的单元格</li>
-</ol>
-</li>
-<li><p>逻辑CSS的像素 在CSS里面设置px  网页的格子的最小单元</p>
-<ol>
-<li>一般在移动端会设置视口 让网页的宽度=设备真实宽度</li>
-<li>意味着网页的真实宽度和设备的真实宽度一致 </li>
-<li>CSSpx 和 真实像素一致</li>
-</ol>
-</li>
-<li><p>在手机上由于物理分辨率和真实像素的大小不一样 一般2倍 更高有3倍的</p>
-<ol>
-<li>写页面的时候参照是真实像素 页面在分辨率里面就放大2倍 </li>
-<li>如果是矢量的放大不会失真 如果图片非矢量图放大会失真 </li>
-<li>使用图片的时候要缩小一半来写 让他在分辨率放大2倍刚好和原图一样</li>
-</ol>
-</li>
-</ol>
-<h2 id="移动端的JS"><a href="#移动端的JS" class="headerlink" title="移动端的JS"></a>移动端的JS</h2><ol>
-<li><p>使用纯原生的JS  会使用HTML5新增的JSAPI<br> document.querySelector(‘选择器’)<br> document.querySelectorAll(‘选择器’)<br> div.addEventListener(‘click’,function(){</p>
-<p> });<br> div.classList.add(‘类名’);</p>
-<p> H5的APi使用方便 在移动端兼容性好</p>
-</li>
-</ol>
-<h2 id="头部背景色渐变"><a href="#头部背景色渐变" class="headerlink" title="头部背景色渐变"></a>头部背景色渐变</h2><ol>
-<li>当滚动条在滚动的时候 顶部搜索框的背景色需要渐变</li>
-<li>在轮播图高度范围内进行渐变 超过轮播图范围后固定为1</li>
-<li>在轮播图高度范围进行渐变 把背景色的透明度从0 到 1 的渐变过程</li>
-<li>透明度值 就是使用滚动的距离/轮播图的高度 </li>
-</ol>
-<h2 id="倒计时效果"><a href="#倒计时效果" class="headerlink" title="倒计时效果"></a>倒计时效果</h2><ol>
-<li>要有一个时间倒计时</li>
-<li>10点场 10点-12点    假如现在10.30     12.00-10.30  =   1.30</li>
-<li>使用未来的时间  - 当前的时间   未来是12  - 当前  10.35  求到时间差的秒数</li>
-<li>倒计时是每隔1秒总的时间– </li>
-<li>把总时间时  分 秒 放到页面的span里面</li>
-</ol>
-<h2 id="轮播图效果"><a href="#轮播图效果" class="headerlink" title="轮播图效果"></a>轮播图效果</h2><ol>
-<li>移动端需要自动轮播图</li>
-<li>小圆点跟着自动轮播图</li>
-<li>滑动轮播图</li>
-<li>一般实现轮播图都使用插件实现</li>
-</ol>
-<h2 id="swiper轮播图插件的使用"><a href="#swiper轮播图插件的使用" class="headerlink" title="swiper轮播图插件的使用"></a>swiper轮播图插件的使用</h2><ol>
-<li>下载swiper插件 </li>
-<li>下载完成后要解压 使用里面的dist目录</li>
-<li>把dist复制到项目改成名字swiper</li>
-<li>引包<ol>
-<li>引入swiper.css</li>
-<li>引入swiper.js</li>
-</ol>
-</li>
-<li>写一个轮播图需要结构 <!-- 轮播图的大容器 装了所有内容图片小圆点按钮等 -->
- <div class="swiper-container"><pre><code>&lt;!-- 轮播图的图片容器 装的是所有的轮播图项(一般是图片) --&gt;
-&lt;div class=&quot;swiper-wrapper&quot;&gt;
-    &lt;!-- swiper-slide 每一个轮播项 --&gt;
-    &lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;
-    &lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;
-    &lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- 小圆点容器 --&gt;
-&lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
-&lt;!-- 左右箭头 --&gt;
-&lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
-&lt;!-- 滚动条容器 --&gt;
-&lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
-</code></pre> </div><br> 注意一定要使用官网的类名因为有样式的没有类名就有样式</li>
-<li><p>给轮播图大容器设置样式 限制轮播图的宽高<br>   .swiper-container {</p>
-<pre><code>width: 600px;
-height: 300px;
-</code></pre><p>   }  </p>
-</li>
-<li><p>添加一个JS代码去初始化轮播图  传入一些初始化的一些参数</p>
-   <script>        
-     var mySwiper = new Swiper ('.swiper-container', {
-       direction: 'vertical', // 垂直切换选项
-       loop: true, // 循环模式选项
-
-       // 如果需要分页器
-       pagination: {
-         el: '.swiper-pagination',
-       },
-
-       // 如果需要前进后退按钮
-       navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-       },
-
-       // 如果需要滚动条
-       scrollbar: {
-         el: '.swiper-scrollbar',
-       },
-     })        
-   </script>
-
-
-
-</li>
-</ol>
-<h2 id="swiper插件的一些常见参数"><a href="#swiper插件的一些常见参数" class="headerlink" title="swiper插件的一些常见参数"></a>swiper插件的一些常见参数</h2><ol>
-<li>轮播图的方向<br>  direction: ‘vertical’  垂直<br>  direction: ‘horizontal’  水平</li>
-<li>自动轮播图<br>autoplay:{<br>  delay: 3000,//轮播图的延迟<br>  stopOnLastSlide: false,// 如果设置为true，当切换到最后一个slide时停止自动切换。（loop模式下无效）<br>  disableOnInteraction:true,//当用户滑动的时候禁止自动轮播图 不需要禁止就为false<br>}</li>
-<li>是否开启无缝轮播图<br> loop: true,//是否开启无缝轮播图 开启无轮播图  如果不开 刷回去倒退回去</li>
-<li>是否显示小圆点<br>pagination:{<pre><code>el: &apos;.swiper-pagination&apos;,//如果需要显示小圆点就指定小圆点容器
-</code></pre>}</li>
-<li>是否要左右箭头<br>  navigation: {<pre><code>nextEl: &apos;.swiper-button-next&apos;,
-prevEl: &apos;.swiper-button-prev&apos;,
-</code></pre>   },//指定左右箭头的容器</li>
-<li>是否要支持滚动条<br>  scrollbar: {<pre><code>el: &apos;.swiper-scrollbar&apos;,
-</code></pre>   },//指定滚动条的容器</li>
-</ol>
-<h2 id="修改轮播图的样式"><a href="#修改轮播图的样式" class="headerlink" title="修改轮播图的样式"></a>修改轮播图的样式</h2><ol>
-<li>如果需要修改图片大小 直接选中你的图片设置大小</li>
-<li>如果要修改小圆点的样式 </li>
-</ol>
-<h2 id="使用swiper完成jd主页轮播图效果"><a href="#使用swiper完成jd主页轮播图效果" class="headerlink" title="使用swiper完成jd主页轮播图效果"></a>使用swiper完成jd主页轮播图效果</h2><ol>
-<li>引包 注意在我们的样式前面引入swiper.css 在我们的js前面引入swiper.js</li>
-<li><p>写结构</p>
-   <div class="swiper-container"><br>       <!-- 轮播图的图片容器 装的是所有的轮播图项(一般是图片) --><br>       <div class="swiper-wrapper"><br>           <!-- swiper-slide 每一个轮播项 --><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l1.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l2.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l3.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l4.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l5.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l6.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l7.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l8.jpg" alt=""><br>               </a><br>           </div><br>       </div><br>       <!-- 小圆点容器 --><br>       <div class="swiper-pagination"></div><br>   </div> 
-</li>
-<li><p>设置样式<br> #slide {</p>
-<pre><code>img {
-    width: 100%;
-}
-/* 修改小圆点样式 */
-.swiper-pagination-bullet {
-    background-color: transparent;
-    opacity: 1;
-    border: 1px solid #fff;
-    width: 8px;
-    height: 8px;
-    box-sizing: border-box;
-}
-.swiper-pagination-bullet-active {
-    background-color: #fff;
-}
-</code></pre><p> }</p>
-</li>
-<li>初始化jd的轮播图<br> var mySwiper = new Swiper(‘#slide .swiper-container’, {<pre><code>direction: &apos;horizontal&apos;, // 垂直切换选项
-autoplay: {
-    delay: 1000, //轮播图的延迟
-    stopOnLastSlide: false, // 如果设置为true，当切换到最后一个slide时停止自动切换。（loop模式下无效）
-    disableOnInteraction: false //当用户滑动的时候禁止自动轮播图 不需要禁止就为false
-},
-loop: true, // 是否开启无缝轮播图 开启无轮播图  如果不开 刷回去倒退回去
-// 如果需要分页器
-pagination: {
-    el: &apos;.swiper-pagination&apos;,
-}      
-</code></pre> });</li>
-</ol>
-<h2 id="写JS代码的规范"><a href="#写JS代码的规范" class="headerlink" title="写JS代码的规范"></a>写JS代码的规范</h2><ol>
-<li>如果JS代码太多的时候不能全部写在一块  把每个代码区分功能块</li>
-<li>当JS代码的功能不一样的时候要区分JS代码的功能<ol>
-<li>顶部是一个功能</li>
-<li>倒计时是一个功能</li>
-<li>轮播图也是一个功能</li>
-</ol>
-</li>
-<li>JS使用函数来区分<br> 使用函数封装每个功能代码 方便调用 和管理每个功能 提高代码的阅读性和维护性</li>
-</ol>
-<ol start="4">
-<li>函数封装有2个作用<ol>
-<li>重复执行的代码 需要封装函数</li>
-<li>区分功能块代码 也需要封装函数</li>
-</ol>
-</li>
-</ol>
-<ol start="5">
-<li><p>再升华就是面向对象<br> 为什么要使用对象</p>
-<ol>
-<li>对象只需要一个全局 减少全局污染</li>
-<li>给函数归类 属于效果归在效果类  属于工具 归在工具类</li>
-</ol>
-</li>
-<li><p>对象再升华就是面向框架</p>
-<ol>
-<li>可以把很多函数都需要的参数放到构造函数  原型对象里面的每个函数都能访问到公共的参数</li>
-<li>把工具函数 功能函数放到对象的原型对象上</li>
-</ol>
-</li>
-<li><p>高级对象和框架式写法都是为了未来方便去维护和扩展代码</p>
-</li>
-</ol>
-<h2 id="京东分类页面布局"><a href="#京东分类页面布局" class="headerlink" title="京东分类页面布局"></a>京东分类页面布局</h2><ol>
-<li>京东分类页面是全屏的  水平和垂直都没有滚动条 （注意）</li>
-<li><p>要显示更多内容 使用滑动来实现  （注意）<br> 左侧菜单有滑动<br> 右侧商品列表也有滑动<br> 滑动都是垂直方向</p>
-</li>
-<li><p>如果想要实现全屏页面 就要让body宽高和屏幕一样宽高 里面的内容也不能超出body 如果有超出要设置overflow:hidden</p>
-</li>
-</ol>
-<h2 id="背景图的定位原点和背景图裁切"><a href="#背景图的定位原点和背景图裁切" class="headerlink" title="背景图的定位原点和背景图裁切"></a>背景图的定位原点和背景图裁切</h2><ol>
-<li><p>background-origin:  改变背景图定位位置参照点  默认padding-box<br>可以设置为border-box padding-box  content-box<br>改变后就会按照你设置的背景图定位参照盒模型范围的左上角</p>
-</li>
-<li><p>background-clip: 实现背景图的裁切 默认 border-box 表示边框范围内都有背景图<br> 可以设置为border-box  padding-box  content-box<br> 设置了之后就会改变背景图出现的范围 </p>
-</li>
-<li><p>通常2个会结合在一起使用 一般当盒子有padding或者有边框的时候才需要设置这些东西</p>
-</li>
-</ol>
-<h2 id="实现分类页面的全屏布局"><a href="#实现分类页面的全屏布局" class="headerlink" title="实现分类页面的全屏布局"></a>实现分类页面的全屏布局</h2><ol>
-<li>给头部 固定高度 位置固定定位在顶部</li>
-<li>给底部 固定高度 位置固定定位在底部</li>
-<li>给html和body设置高度100% </li>
-<li>给body设置padding-top 和 padding-bottom 让main往中间挤</li>
-<li>给main设置height:100%  就和body的高度一致</li>
-<li>给main里面的category-left 和 category-right 设置高度100% overflow:hidden;</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -595,6 +323,366 @@ pagination: {
       
 
       
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-移动web第6天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/23/移动web第6天/" class="article-date">
+      <time datetime="2018-09-23T10:40:00.000Z" itemprop="datePublished">2018-09-23</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/23/移动web第6天/">笔记--移动web第六天</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p><excerpt in="" index="" |="" 首页摘要=""><br>+
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2018/09/23/移动web第6天/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-移动web第5天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/22/移动web第5天/" class="article-date">
+      <time datetime="2018-09-22T10:40:00.000Z" itemprop="datePublished">2018-09-22</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/22/移动web第5天/">笔记--移动web第五天</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p><excerpt in="" index="" |="" 首页摘要=""><br>+
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2018/09/22/移动web第5天/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-移动web第四天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/21/移动web第四天/" class="article-date">
+      <time datetime="2018-09-21T10:00:00.000Z" itemprop="datePublished">2018-09-21</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/21/移动web第四天/">笔记--移动web第四天</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p><excerpt in="" index="" |="" 首页摘要=""><br>+
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2018/09/21/移动web第四天/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-移动web第三天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/20/移动web第三天/" class="article-date">
+      <time datetime="2018-09-20T10:00:00.000Z" itemprop="datePublished">2018-09-20</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/20/移动web第三天/">笔记--移动web第三天</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p><excerpt in="" index="" |="" 首页摘要=""><br>+
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2018/09/20/移动web第三天/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-移动web第二天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/19/移动web第二天/" class="article-date">
+      <time datetime="2018-09-19T10:00:00.000Z" itemprop="datePublished">2018-09-19</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/19/移动web第二天/">笔记--移动web第二天</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p><excerpt in="" index="" |="" 首页摘要=""><br>+
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2018/09/19/移动web第二天/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-移动web第一天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/18/移动web第一天/" class="article-date">
+      <time datetime="2018-09-18T10:00:00.000Z" itemprop="datePublished">2018-09-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/18/移动web第一天/">笔记--移动web第一天</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p><excerpt in="" index="" |="" 总结=""><br>+
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2018/09/18/移动web第一天/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
