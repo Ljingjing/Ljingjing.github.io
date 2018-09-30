@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Ljingjing" />
+
+
+
+<meta name="description" content="总结 顶部搜索框渐变JS 秒杀商品倒计时JS 轮播图插件的使用 分类页面的布局 分类左侧的滑动效果  像素的概念 物理分辨率像素： 屏幕的分辨率（屏幕里面一层膜）  普通电脑 屏幕分辨率 1366*768 高级电脑 屏幕分辨率 1920  1080  2560  1660 普通手机 屏幕分辨率 750 * 1334 高级手机 屏幕分辨率 1125 * 2436屏幕分辨率值的是屏幕内屏里面的最小单元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/09/30/移动web第5天/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="总结 顶部搜索框渐变JS 秒杀商品倒计时JS 轮播图插件的使用 分类页面的布局 分类左侧的滑动效果  像素的概念 物理分辨率像素： 屏幕的分辨率（屏幕里面一层膜）  普通电脑 屏幕分辨率 1366*768 高级电脑 屏幕分辨率 1920  1080  2560  1660 普通手机 屏幕分辨率 750 * 1334 高级手机 屏幕分辨率 1125 * 2436屏幕分辨率值的是屏幕内屏里面的最小单元">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l4.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l5.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l6.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l7.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l8.jpg">
+<meta property="og:updated_time" content="2018-09-22T10:49:03.428Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="总结 顶部搜索框渐变JS 秒杀商品倒计时JS 轮播图插件的使用 分类页面的布局 分类左侧的滑动效果  像素的概念 物理分辨率像素： 屏幕的分辨率（屏幕里面一层膜）  普通电脑 屏幕分辨率 1366*768 高级电脑 屏幕分辨率 1920  1080  2560  1660 普通手机 屏幕分辨率 750 * 1334 高级手机 屏幕分辨率 1125 * 2436屏幕分辨率值的是屏幕内屏里面的最小单元">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/30/移动web第5天/images/l1.jpg">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/touxiang.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Ljingjing</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/771580134@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="/阳光下的小孩er" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Ljingjing" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 网易云音乐" href="/netease" title="网易云音乐"></a>
+                            
+                                <a class="fa QQ" href="/771580134" title="QQ"></a>
+                            
+                                <a class="fa 微信" href="/771580134" title="微信"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Ljingjing</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/touxiang.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Ljingjing</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/771580134@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="/阳光下的小孩er" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Ljingjing" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="/netease" title="网易云音乐"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="/771580134" title="QQ"></a>
+                            
+                                <a class="fa 微信" target="_blank" href="/771580134" title="微信"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-移动web第5天" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/30/移动web第5天/" class="article-date">
+      <time datetime="2018-09-30T02:39:20.858Z" itemprop="datePublished">2018-09-30</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>顶部搜索框渐变JS</li>
+<li>秒杀商品倒计时JS</li>
+<li>轮播图插件的使用</li>
+<li>分类页面的布局</li>
+<li>分类左侧的滑动效果</li>
+</ol>
+<h2 id="像素的概念"><a href="#像素的概念" class="headerlink" title="像素的概念"></a>像素的概念</h2><ol>
+<li>物理分辨率像素： 屏幕的分辨率（屏幕里面一层膜） <ol>
+<li>普通电脑 屏幕分辨率 1366*768</li>
+<li>高级电脑 屏幕分辨率 1920 <em> 1080  2560 </em> 1660</li>
+<li>普通手机 屏幕分辨率 750 * 1334</li>
+<li>高级手机 屏幕分辨率 1125 * 2436<br>屏幕分辨率值的是屏幕内屏里面的最小单元格</li>
+</ol>
+</li>
+<li>真实尺寸的像素 ： 真实尺寸的像素 固定的只要设备大小一样 真实像素就一样<ol>
+<li>普通电脑14寸 ： 真实 1366 * 768</li>
+<li>高级电脑13.3寸  真实 1280 * 720</li>
+<li>普通手机4.7        真实 375 * 667</li>
+<li>高级手机5.5寸      真实 414 * 736w<br>真实像素是屏幕外屏里面的最小的单元格</li>
+</ol>
+</li>
+<li><p>逻辑CSS的像素 在CSS里面设置px  网页的格子的最小单元</p>
+<ol>
+<li>一般在移动端会设置视口 让网页的宽度=设备真实宽度</li>
+<li>意味着网页的真实宽度和设备的真实宽度一致 </li>
+<li>CSSpx 和 真实像素一致</li>
+</ol>
+</li>
+<li><p>在手机上由于物理分辨率和真实像素的大小不一样 一般2倍 更高有3倍的</p>
+<ol>
+<li>写页面的时候参照是真实像素 页面在分辨率里面就放大2倍 </li>
+<li>如果是矢量的放大不会失真 如果图片非矢量图放大会失真 </li>
+<li>使用图片的时候要缩小一半来写 让他在分辨率放大2倍刚好和原图一样</li>
+</ol>
+</li>
+</ol>
+<h2 id="移动端的JS"><a href="#移动端的JS" class="headerlink" title="移动端的JS"></a>移动端的JS</h2><ol>
+<li><p>使用纯原生的JS  会使用HTML5新增的JSAPI<br> document.querySelector(‘选择器’)<br> document.querySelectorAll(‘选择器’)<br> div.addEventListener(‘click’,function(){</p>
+<p> });<br> div.classList.add(‘类名’);</p>
+<p> H5的APi使用方便 在移动端兼容性好</p>
+</li>
+</ol>
+<h2 id="头部背景色渐变"><a href="#头部背景色渐变" class="headerlink" title="头部背景色渐变"></a>头部背景色渐变</h2><ol>
+<li>当滚动条在滚动的时候 顶部搜索框的背景色需要渐变</li>
+<li>在轮播图高度范围内进行渐变 超过轮播图范围后固定为1</li>
+<li>在轮播图高度范围进行渐变 把背景色的透明度从0 到 1 的渐变过程</li>
+<li>透明度值 就是使用滚动的距离/轮播图的高度 </li>
+</ol>
+<h2 id="倒计时效果"><a href="#倒计时效果" class="headerlink" title="倒计时效果"></a>倒计时效果</h2><ol>
+<li>要有一个时间倒计时</li>
+<li>10点场 10点-12点    假如现在10.30     12.00-10.30  =   1.30</li>
+<li>使用未来的时间  - 当前的时间   未来是12  - 当前  10.35  求到时间差的秒数</li>
+<li>倒计时是每隔1秒总的时间– </li>
+<li>把总时间时  分 秒 放到页面的span里面</li>
+</ol>
+<h2 id="轮播图效果"><a href="#轮播图效果" class="headerlink" title="轮播图效果"></a>轮播图效果</h2><ol>
+<li>移动端需要自动轮播图</li>
+<li>小圆点跟着自动轮播图</li>
+<li>滑动轮播图</li>
+<li>一般实现轮播图都使用插件实现</li>
+</ol>
+<h2 id="swiper轮播图插件的使用"><a href="#swiper轮播图插件的使用" class="headerlink" title="swiper轮播图插件的使用"></a>swiper轮播图插件的使用</h2><ol>
+<li>下载swiper插件 </li>
+<li>下载完成后要解压 使用里面的dist目录</li>
+<li>把dist复制到项目改成名字swiper</li>
+<li>引包<ol>
+<li>引入swiper.css</li>
+<li>引入swiper.js</li>
+</ol>
+</li>
+<li>写一个轮播图需要结构 <!-- 轮播图的大容器 装了所有内容图片小圆点按钮等 -->
+ <div class="swiper-container"><pre><code>&lt;!-- 轮播图的图片容器 装的是所有的轮播图项(一般是图片) --&gt;
+&lt;div class=&quot;swiper-wrapper&quot;&gt;
+    &lt;!-- swiper-slide 每一个轮播项 --&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;
+    &lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 小圆点容器 --&gt;
+&lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+&lt;!-- 左右箭头 --&gt;
+&lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+&lt;!-- 滚动条容器 --&gt;
+&lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
+</code></pre> </div><br> 注意一定要使用官网的类名因为有样式的没有类名就有样式</li>
+<li><p>给轮播图大容器设置样式 限制轮播图的宽高<br>   .swiper-container {</p>
+<pre><code>width: 600px;
+height: 300px;
+</code></pre><p>   }  </p>
+</li>
+<li><p>添加一个JS代码去初始化轮播图  传入一些初始化的一些参数</p>
+   <script>        
+     var mySwiper = new Swiper ('.swiper-container', {
+       direction: 'vertical', // 垂直切换选项
+       loop: true, // 循环模式选项
+
+       // 如果需要分页器
+       pagination: {
+         el: '.swiper-pagination',
+       },
+
+       // 如果需要前进后退按钮
+       navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev',
+       },
+
+       // 如果需要滚动条
+       scrollbar: {
+         el: '.swiper-scrollbar',
+       },
+     })        
+   </script>
+
+
+
+</li>
+</ol>
+<h2 id="swiper插件的一些常见参数"><a href="#swiper插件的一些常见参数" class="headerlink" title="swiper插件的一些常见参数"></a>swiper插件的一些常见参数</h2><ol>
+<li>轮播图的方向<br>  direction: ‘vertical’  垂直<br>  direction: ‘horizontal’  水平</li>
+<li>自动轮播图<br>autoplay:{<br>  delay: 3000,//轮播图的延迟<br>  stopOnLastSlide: false,// 如果设置为true，当切换到最后一个slide时停止自动切换。（loop模式下无效）<br>  disableOnInteraction:true,//当用户滑动的时候禁止自动轮播图 不需要禁止就为false<br>}</li>
+<li>是否开启无缝轮播图<br> loop: true,//是否开启无缝轮播图 开启无轮播图  如果不开 刷回去倒退回去</li>
+<li>是否显示小圆点<br>pagination:{<pre><code>el: &apos;.swiper-pagination&apos;,//如果需要显示小圆点就指定小圆点容器
+</code></pre>}</li>
+<li>是否要左右箭头<br>  navigation: {<pre><code>nextEl: &apos;.swiper-button-next&apos;,
+prevEl: &apos;.swiper-button-prev&apos;,
+</code></pre>   },//指定左右箭头的容器</li>
+<li>是否要支持滚动条<br>  scrollbar: {<pre><code>el: &apos;.swiper-scrollbar&apos;,
+</code></pre>   },//指定滚动条的容器</li>
+</ol>
+<h2 id="修改轮播图的样式"><a href="#修改轮播图的样式" class="headerlink" title="修改轮播图的样式"></a>修改轮播图的样式</h2><ol>
+<li>如果需要修改图片大小 直接选中你的图片设置大小</li>
+<li>如果要修改小圆点的样式 </li>
+</ol>
+<h2 id="使用swiper完成jd主页轮播图效果"><a href="#使用swiper完成jd主页轮播图效果" class="headerlink" title="使用swiper完成jd主页轮播图效果"></a>使用swiper完成jd主页轮播图效果</h2><ol>
+<li>引包 注意在我们的样式前面引入swiper.css 在我们的js前面引入swiper.js</li>
+<li><p>写结构</p>
+   <div class="swiper-container"><br>       <!-- 轮播图的图片容器 装的是所有的轮播图项(一般是图片) --><br>       <div class="swiper-wrapper"><br>           <!-- swiper-slide 每一个轮播项 --><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l1.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l2.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l3.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l4.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l5.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l6.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l7.jpg" alt=""><br>               </a><br>           </div><br>           <div class="swiper-slide"><br>               <a href="#"><br>                   <img src="images/l8.jpg" alt=""><br>               </a><br>           </div><br>       </div><br>       <!-- 小圆点容器 --><br>       <div class="swiper-pagination"></div><br>   </div> 
+</li>
+<li><p>设置样式<br> #slide {</p>
+<pre><code>img {
+    width: 100%;
+}
+/* 修改小圆点样式 */
+.swiper-pagination-bullet {
+    background-color: transparent;
+    opacity: 1;
+    border: 1px solid #fff;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+}
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+</code></pre><p> }</p>
+</li>
+<li>初始化jd的轮播图<br> var mySwiper = new Swiper(‘#slide .swiper-container’, {<pre><code>direction: &apos;horizontal&apos;, // 垂直切换选项
+autoplay: {
+    delay: 1000, //轮播图的延迟
+    stopOnLastSlide: false, // 如果设置为true，当切换到最后一个slide时停止自动切换。（loop模式下无效）
+    disableOnInteraction: false //当用户滑动的时候禁止自动轮播图 不需要禁止就为false
+},
+loop: true, // 是否开启无缝轮播图 开启无轮播图  如果不开 刷回去倒退回去
+// 如果需要分页器
+pagination: {
+    el: &apos;.swiper-pagination&apos;,
+}      
+</code></pre> });</li>
+</ol>
+<h2 id="写JS代码的规范"><a href="#写JS代码的规范" class="headerlink" title="写JS代码的规范"></a>写JS代码的规范</h2><ol>
+<li>如果JS代码太多的时候不能全部写在一块  把每个代码区分功能块</li>
+<li>当JS代码的功能不一样的时候要区分JS代码的功能<ol>
+<li>顶部是一个功能</li>
+<li>倒计时是一个功能</li>
+<li>轮播图也是一个功能</li>
+</ol>
+</li>
+<li>JS使用函数来区分<br> 使用函数封装每个功能代码 方便调用 和管理每个功能 提高代码的阅读性和维护性</li>
+</ol>
+<ol start="4">
+<li>函数封装有2个作用<ol>
+<li>重复执行的代码 需要封装函数</li>
+<li>区分功能块代码 也需要封装函数</li>
+</ol>
+</li>
+</ol>
+<ol start="5">
+<li><p>再升华就是面向对象<br> 为什么要使用对象</p>
+<ol>
+<li>对象只需要一个全局 减少全局污染</li>
+<li>给函数归类 属于效果归在效果类  属于工具 归在工具类</li>
+</ol>
+</li>
+<li><p>对象再升华就是面向框架</p>
+<ol>
+<li>可以把很多函数都需要的参数放到构造函数  原型对象里面的每个函数都能访问到公共的参数</li>
+<li>把工具函数 功能函数放到对象的原型对象上</li>
+</ol>
+</li>
+<li><p>高级对象和框架式写法都是为了未来方便去维护和扩展代码</p>
+</li>
+</ol>
+<h2 id="京东分类页面布局"><a href="#京东分类页面布局" class="headerlink" title="京东分类页面布局"></a>京东分类页面布局</h2><ol>
+<li>京东分类页面是全屏的  水平和垂直都没有滚动条 （注意）</li>
+<li><p>要显示更多内容 使用滑动来实现  （注意）<br> 左侧菜单有滑动<br> 右侧商品列表也有滑动<br> 滑动都是垂直方向</p>
+</li>
+<li><p>如果想要实现全屏页面 就要让body宽高和屏幕一样宽高 里面的内容也不能超出body 如果有超出要设置overflow:hidden</p>
+</li>
+</ol>
+<h2 id="背景图的定位原点和背景图裁切"><a href="#背景图的定位原点和背景图裁切" class="headerlink" title="背景图的定位原点和背景图裁切"></a>背景图的定位原点和背景图裁切</h2><ol>
+<li><p>background-origin:  改变背景图定位位置参照点  默认padding-box<br>可以设置为border-box padding-box  content-box<br>改变后就会按照你设置的背景图定位参照盒模型范围的左上角</p>
+</li>
+<li><p>background-clip: 实现背景图的裁切 默认 border-box 表示边框范围内都有背景图<br> 可以设置为border-box  padding-box  content-box<br> 设置了之后就会改变背景图出现的范围 </p>
+</li>
+<li><p>通常2个会结合在一起使用 一般当盒子有padding或者有边框的时候才需要设置这些东西</p>
+</li>
+</ol>
+<h2 id="实现分类页面的全屏布局"><a href="#实现分类页面的全屏布局" class="headerlink" title="实现分类页面的全屏布局"></a>实现分类页面的全屏布局</h2><ol>
+<li>给头部 固定高度 位置固定定位在顶部</li>
+<li>给底部 固定高度 位置固定定位在底部</li>
+<li>给html和body设置高度100% </li>
+<li>给body设置padding-top 和 padding-bottom 让main往中间挤</li>
+<li>给main设置height:100%  就和body的高度一致</li>
+<li>给main里面的category-left 和 category-right 设置高度100% overflow:hidden;</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/09/30/移动web第5天/"></a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Ljingjing</a></p>
+        <p><span>发布时间:</span>2018-09-30, 10:39:20</p>
+        <p><span>最后更新:</span>2018-09-22, 18:49:03</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/30/移动web第5天/" title="">http://yoursite.com/2018/09/30/移动web第5天/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/30/移动web第5天/　　作者: Ljingjing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/09/30/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#像素的概念"><span class="toc-number">2.</span> <span class="toc-text">像素的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端的JS"><span class="toc-number">3.</span> <span class="toc-text">移动端的JS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#头部背景色渐变"><span class="toc-number">4.</span> <span class="toc-text">头部背景色渐变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#倒计时效果"><span class="toc-number">5.</span> <span class="toc-text">倒计时效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#轮播图效果"><span class="toc-number">6.</span> <span class="toc-text">轮播图效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swiper轮播图插件的使用"><span class="toc-number">7.</span> <span class="toc-text">swiper轮播图插件的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swiper插件的一些常见参数"><span class="toc-number">8.</span> <span class="toc-text">swiper插件的一些常见参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改轮播图的样式"><span class="toc-number">9.</span> <span class="toc-text">修改轮播图的样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用swiper完成jd主页轮播图效果"><span class="toc-number">10.</span> <span class="toc-text">使用swiper完成jd主页轮播图效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写JS代码的规范"><span class="toc-number">11.</span> <span class="toc-text">写JS代码的规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#京东分类页面布局"><span class="toc-number">12.</span> <span class="toc-text">京东分类页面布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#背景图的定位原点和背景图裁切"><span class="toc-number">13.</span> <span class="toc-text">背景图的定位原点和背景图裁切</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现分类页面的全屏布局"><span class="toc-number">14.</span> <span class="toc-text">实现分类页面的全屏布局</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2018/09/30/移动web第5天/" data-title="" data-url="http://yoursite.com/2018/09/30/移动web第5天/"></div>
+    <script>
+        var duoshuoQuery = {short_name:""};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/09/30/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/30/移动web第5天/">移动web第5天</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/30/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 Ljingjing
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
